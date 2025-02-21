@@ -1,50 +1,68 @@
 import { useLocation } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { useContext } from "react";
 import { DataContext } from "./AppDB";
+import "../css/Login.css";
 
 export default function Login(props) {
-
     const navigate = useNavigate();
-    const {state} = useLocation();
-    const {usersDetails} = useContext(DataContext);
-    const [user, setUser] = useState({userName: '', password: ''});
+    const { usersDetails } = useContext(DataContext);
+    const [user, setUser] = useState({ email: '', password: '' });
+    const [error, setError] = useState("");
 
-    const btnCheckIn = () =>{
-        navigate('/',{state: usersList})
-    }
+    const btnCheckIn = () => {
+        navigate('/Register', { state: usersDetails });
+    };
 
     const btnHP = () => {
         const foundUser = usersDetails.find(userDetails => 
-            userDetails.name === user.userName && userDetails.password === user.password
+            userDetails.email === user.email && userDetails.password === user.password
         );
-    
+
         if (foundUser) {
             console.log("exist");
         } else {
-            console.log("Not exist");
+            setError("Invalid email or password");
         }
     };
 
     const chgUserName = (e) => {
-        setUser({...user, userName: e.target.value});
-    }
+        setUser({ ...user, email: e.target.value });
+    };
 
     const chgPassword = (e) => {
-        setUser({...user, password: e.target.value});
-    }
+        setUser({ ...user, password: e.target.value });
+    };
 
   return (
-    <div>Login
+    <div className="login-container">
+      <div className="login-card">
+        <h1 className="login-title">Login</h1>
         <div>
-            Username: <input type="text" onChange={chgUserName} /><br />
-            Password: <input type="text" onChange={chgPassword} />
+          <label className="login-label">Email:</label>
+          <input type="text" className="login-input" onChange={chgUserName} />
+
+          <label className="login-label">Password:</label>
+          <input
+            type="password"
+            className="login-input"
+            onChange={chgPassword}
+          />
         </div>
-        <div>
-            <button onClick={btnHP}>Login</button>
-            <button onClick={btnCheckIn}>Check In</button>        
+        {error && <p className="error-message">{error}</p>}
+        <div className="login-buttons">
+          <button className="login-btn login-btn-primary" onClick={btnHP}>
+            Login
+          </button>
+          <button
+            className="login-btn login-btn-secondary"
+            onClick={btnCheckIn}
+          >
+            Not Register yet?
+          </button>
         </div>
+      </div>
     </div>
-  )
+  );
 }

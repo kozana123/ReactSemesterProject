@@ -1,0 +1,75 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2b2b2b; /* רקע כהה */
+}
+
+.title {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-form {
+    background-color: #b22222; /* אדום כהה */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+.register-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.register-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.register-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.next:hover {
+    background-color: #ff1a1a;
+}
+
+.check-in {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.check-in:hover {
+    background-color: #d9d9d9;
+}
+
+img {
+    background-color: transparent; /* מסיר רקע */
+    mix-blend-mode: multiply; /* משתלב עם הרקע */
+}

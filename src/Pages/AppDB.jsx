@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import { createContext } from "react";
 
-import { v4 as uuidv4 } from 'uuid';
+
 
 export const DataContext = createContext(null);
  
@@ -13,8 +13,8 @@ export default function AppDB(props) {
     const [userMatch , setUserMatch] = useState([{ uniqeId: 1, matchId: ''}]);
 
 
-    const AddUser = ( name , birthDay , email ,phone , city , gender , password) => {
-      let newUser = [...usersDetails, { uniqeId: uuidv4(), name, birthDay, email, phone, city, gender, password}];
+    const AddUser = (uniqeId, name , birthDay , email ,phone , city , gender , password) => {
+      let newUser = [...usersDetails, { uniqeId, name, birthDay, email, phone, city, gender, password}];
       setUserDetails(newUser);
     }
 
@@ -24,7 +24,7 @@ export default function AppDB(props) {
     }
     
   return (
-    <DataContext.Provider value = {{usersDetails, userPreference, AddUser, AddUserPreference}}>
+    <DataContext.Provider value = {{usersDetails,setUserDetails, userPreference,setUserPreference, AddUser, AddUserPreference}}>
         {props.children}
     </DataContext.Provider>
   )

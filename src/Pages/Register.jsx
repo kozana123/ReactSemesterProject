@@ -1,44 +1,42 @@
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import { useState } from 'react';
-import AppDB from './AppDB';
 import { useContext } from "react";
 import { DataContext } from "./AppDB";
+import '../css/Register.css';
+
+
 
 export default function Register(props) {
 
     const {usersDetails} = useContext(DataContext);
     const navigate = useNavigate();
-
     const [newUser, setNewUser] = useState({ email: '' , password: ''})
 
     const ConfirmBtn = () =>{
         let isExist = false
+        console.log(usersDetails);
+        console.log("Checking for:", newUser.email);
+
         
-        if(newUser.userName == '' || newUser.password == ''){
+        if(newUser.email === '' || newUser.password === ''){
             console.log("Its empty")
             isExist = true
         } 
 
-        usersDetails.forEach(user => {   
-            if(user.email === newUser.email){
-                console.log("The user is exist")
-                isExist = true
-            }
-        });
-
         if(isExist == false){
-            navigate('/RegisterPassword', {state: newUser})
+            navigate('/ContinueRegister', { state: newUser });
         }
 
     }
 
     const btnCheckIn = () =>{
-        navigate('/',{state:usersList})
+        navigate('/', { state: usersDetails })
+
     }
 
-    const chgUserName = (e) => {
-        setNewUser({...newUser, userName: e.target.value});
+    const chgEmail = (e) => {
+        setNewUser({...newUser, email: e.target.value});
     }
 
     const chgPassword = (e) => {
@@ -46,17 +44,21 @@ export default function Register(props) {
     }        
 
   return (
-    <div>Register
-        <div>
-            Email: <input type="text" m onChange={chgUserName} /><br />
-            Password: <input type="text" onChange={chgPassword} /><br />
-        </div>
-        <div>
-            <button onClick={ConfirmBtn}>Next</button>
-            <button onClick={btnCheckIn}>Check In</button>
-        </div>
+    <div className="register-container">
+    <h1 className='title' >Register</h1>
+    <img src="/public/Pictures/AppIcon.png" alt="" /><br />
+    <div className="register-form">
+        <label>Email:</label>
+        <input type="text" className="register-input" onChange={chgEmail} />
 
-         
+        <label>Password:</label>
+        <input type="password" className="register-input" onChange={chgPassword} />
+
+        <div className="register-buttons">
+            <button className="register-btn next" onClick={ConfirmBtn}>Next</button>
+            <button className="register-btn check-in" onClick={btnCheckIn}>Check In</button>
+        </div>
     </div>
+</div>  
   )
 }
