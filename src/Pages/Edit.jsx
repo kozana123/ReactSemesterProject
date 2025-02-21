@@ -4,7 +4,7 @@ import { DataContext } from "./AppDB";
 import "../css/Edit.css";
 
 export default function Edit() {
-  const { AddUserPreference } = useContext(DataContext);
+  const { AddUserPreference, usersDetails} = useContext(DataContext);
   const navigate = useNavigate();
   const location = useLocation();
   const state = location.state || {};
@@ -93,6 +93,7 @@ export default function Edit() {
             <button className="register-btn next" onClick={savePrefs}>Save</button>
             <button className="register-btn back" onClick={() => navigate(-1)}>Back</button>
           </div>
+          {console.log(usersDetails)}
         </div>
       </div>
     

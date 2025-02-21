@@ -44,23 +44,17 @@ export default function Login(props) {
           <input type="text" className="login-input" onChange={chgUserName} />
 
           <label className="login-label">Password:</label>
-          <input
-            type="password"
-            className="login-input"
-            onChange={chgPassword}
-          />
+          <input type="password" className="login-input" onChange={chgPassword}/>
         </div>
         {error && <p className="error-message">{error}</p>}
         <div className="login-buttons">
           <button className="login-btn login-btn-primary" onClick={btnHP}>
             Login
           </button>
-          <button
-            className="login-btn login-btn-secondary"
-            onClick={btnCheckIn}
-          >
+          <button className="login-btn login-btn-secondary" onClick={btnCheckIn}>
             Not Register yet?
           </button>
+          
         </div>
       </div>
     </div>
