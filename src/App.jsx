@@ -5,6 +5,7 @@ import Login from './Pages/Login'
 import WelcomePage from './Pages/welcomePage'
 import ContinueRegister from './Pages/ContinueRegister'
 import Edit from './Pages/Edit'
+import MainPage from './Pages/MainPage'
 
 
 
@@ -19,6 +20,7 @@ function App(props) {
         <Route path="/Register" element={<Register/>}/>
         <Route path="/ContinueRegister" element={<ContinueRegister/>} />
         <Route path="/Edit" element={<Edit/>} />
+        <Route path="/MainPage" element={<MainPage/>} />
       </Routes>
       </div>
     </>

@@ -23,7 +23,7 @@ export default function ContinueRegister(props) {
     }
   }, [state, navigate]);
 
-  const [newUser, setNewUser] = useState({gender: "",birthDay: "",phone: "",city: "",name: "", email: state.email,password: state.password,});
+  const [newUser, setNewUser] = useState({gender: "",birthDay: "",phone: "",city: "",name: "", email: state.email,password: state.password, image: ""});
 
   const chgName = (e) => setNewUser({ ...newUser, name: e.target.value });
   const chgGender = (e) => setNewUser({ ...newUser, gender: e.target.value });
@@ -53,6 +53,19 @@ export default function ContinueRegister(props) {
     }
   };
 
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+  
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setNewUser({ ...newUser, image: reader.result });
+      };
+    }
+  };
+
   const chgCity = (e) => setNewUser({ ...newUser, city: e.target.value });
 
   const ConfirmBtn = () => {
@@ -78,11 +91,15 @@ export default function ContinueRegister(props) {
       newUser.phone,
       newUser.city,
       newUser.gender,
-      newUser.password
+      newUser.password,
+      newUser.image
     );
   
-    navigate("/Edit", { state: {uniqeId: newUserId}});
+    navigate("/Edit", { state: {uniqeId: newUserId , image: newUser.image}});
   };
+
+
+
 
   const btnCheckIn = () => {
     console.log("Returning to home page.");
@@ -166,6 +183,11 @@ export default function ContinueRegister(props) {
           <option value="Karmiel">Karmiel</option>
           <option value="Yokneam">Yokneam</option>
         </select>
+
+        <label>Upload Profile Picture:</label>
+        <input type="file" accept="image/*" onChange={handleImageUpload} />
+        <img src={newUser.image} alt="Profile Preview" style={{ width: "150px", height: "150px", objectFit: "cover", borderRadius: "50%" }} />
+        <br />
         <div className="register-buttons">
           <button className="register-btn next" onClick={ConfirmBtn}>
             Next

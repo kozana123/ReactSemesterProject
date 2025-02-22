@@ -46,6 +46,7 @@ export default function Edit() {
     }
     AddUserPreference( userPreference.uniqeId, userPreference.preferredPartner,userPreference.relationshipType, userPreference.height,  userPreference.religion, userPreference.isSmoke);
     console.log("User preferences saved:", userPreference);
+    navigate("/MainPage" );
   };
 
   return (
