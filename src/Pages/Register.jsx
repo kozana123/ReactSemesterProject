@@ -45,9 +45,10 @@ export default function Register(props) {
 
   return (
     <div className="register-container">
-    <h1 className='title' >Register</h1>
-    <img src="/public/Pictures/AppIcon.png" alt="" /><br />
+    
+    {/* <img src="/public/Pictures/AppIcon.png" alt="" /><br /> */}
     <div className="register-form">
+    <h1 className='register_title' >Register</h1>
         <label>Email:</label>
         <input type="text" className="register-input" onChange={chgEmail} />
 
@@ -56,7 +57,7 @@ export default function Register(props) {
 
         <div className="register-buttons">
             <button className="register-btn next" onClick={ConfirmBtn}>Next</button>
-            <button className="register-btn check-in" onClick={btnCheckIn}>Check In</button>
+            <button className="register-btn check-in" onClick={btnCheckIn}>Back</button>
         </div>
     </div>
 </div>  

@@ -7,11 +7,11 @@
     background-color: #2b2b2b; /* רקע כהה */
 }
 
-.title {
+.register_title {
     color: #fff;
-    font-size: 2rem;
+    font-size: 22px;
+    font-weight: bold;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .register-form {
@@ -71,5 +71,5 @@
 
 img {
     background-color: transparent; /* מסיר רקע */
-    mix-blend-mode: multiply; /* משתלב עם הרקע */
+    /* mix-blend-mode: multiply; משתלב עם הרקע */
 }

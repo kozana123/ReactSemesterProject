@@ -91,8 +91,9 @@ export default function ContinueRegister(props) {
 
   return (
     <div className="continue-register-container">
-      <h1 className="title">Complete Your Profile</h1>
       <div className="continue-register-form">
+      <h1 className="title">Complete Your Profile</h1>
+
         <label>Name:</label>
         <input type="text" className="register-input" onChange={chgName} />
         <label>Gender:</label>

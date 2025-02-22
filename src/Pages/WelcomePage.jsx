@@ -19,9 +19,9 @@ export default function WelcomePage() {
 
 
   return (
-    <div>
-        <h1>Loview</h1>
-        <img src="/public/Pictures/AppIcon.png" alt="" /><br />
+    <div className="welcome_page"> 
+        <h1 >Loview</h1>
+        <img  src="/public/Pictures/video_movie_player_clip-09-512.webp" alt="" style={{width: 250}}/><br />
         <button onClick={btnLogin}>Login</button><br />
         <button onClick={btnRegister}>Register</button>
 
