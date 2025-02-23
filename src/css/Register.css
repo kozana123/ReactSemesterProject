@@ -1,75 +1,87 @@
+.register-card {
+  background-color:white;
+  color: rgb(45, 20, 20);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+
+  text-align: center;
+}
+
+
 .register-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #2b2b2b; /* רקע כהה */
-}
-
-.register_title {
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.register-form {
-    background-color: #b22222; /* אדום כהה */
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #5a3a3d;
+  padding: 15px;}
+  
+/* Title */
+.register-title {
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
 }
 
 .register-input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-    font-size: 1rem;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+}
+
+/* Form */
+.register-form {
+
+  text-align: center;
+}
+
+.register-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4d2225;
+}
+
+.register-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #c0a0a0;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #9f9595;
+}
+
+.register-error {
+  color: #d32f2f;
+  font-weight: bold;
 }
 
 .register-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
 }
 
 .register-btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 45%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.next {
-    background-color: #ff4d4d;
-    color: white;
+.register-btn-primary {
+  background-color: #9b6060;
+  color: white;
+  border: none;
 }
 
-.next:hover {
-    background-color: #ff1a1a;
-}
-
-.check-in {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-.check-in:hover {
-    background-color: #d9d9d9;
-}
-
-img {
-    background-color: transparent; /* מסיר רקע */
-    /* mix-blend-mode: multiply; משתלב עם הרקע */
+.register-btn-secondary {
+  background-color: #935d5d;
+  color: rgb(248, 240, 240);
+  border: 1px solid rgb(120, 60, 60);
 }

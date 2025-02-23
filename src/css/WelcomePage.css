@@ -1,0 +1,70 @@
+/* General layout */
+.welcome-container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #5a3a3d;
+  padding: 15px;}
+    
+  
+  
+  /* Welcome card */
+  .welcome-card {
+ background-color: #fefafa;
+  color: rgb(45, 20, 20);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px; /* הוספת רוחב מינימלי */
+  text-align: center;
+  
+  }
+  
+  /* Title */
+  .welcome-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #3a1a1d;
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Image */
+  .welcome-img {
+    max-width: 50%; 
+    height: auto; 
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons */
+  .welcome-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .welcome-btn {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .welcome-btn-primary {
+    background-color: #9b6060;
+    color: white;
+    border: none;
+  }
+  
+  .welcome-btn-secondary {
+    background-color: white;
+    color: rgb(120, 60, 60);
+    border: 1px solid rgb(120, 60, 60);
+  }
+  
