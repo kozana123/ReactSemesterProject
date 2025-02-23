@@ -1,103 +1,83 @@
-/* General layout */
-.register-container {
+.register-container .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #5a3a3d;
-    padding: 15px;
-  }
-  
-  /* Register card */
-  .register-card {
-    background-color: #fae8ea;
-    color: rgb(45, 20, 20);
-    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+.register-container .card {
+    background: white;
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
     width: 100%;
-    max-width: 400px;
+}
+
+.register-container h1 {
     text-align: center;
-  }
-  
-  /* Title */
-  .register-title {
-    font-size: 24px;
+    color: #dc3545;
+    margin-bottom: 1.5rem;
+}
+
+.register-container label {
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #3a1a1d;
-  }
-  
-  /* Form */
-  .register-form {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  .register-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #4d2225;
-  }
-  
-  .register-input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 2px solid #c0a0a0;
-    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.register-container .form-control, 
+.register-container .form-select {
     width: 100%;
-    box-sizing: border-box;
-    background-color: #fff0f0;
-  }
-  
-  .register-error {
-    color: #d32f2f;
-    font-weight: bold;
-  }
-  
-  .register-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  .register-btn {
-    padding: 10px;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ced4da;
     border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 45%;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  .register-btn-primary {
+}
+
+.register-container .text-danger {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.register-container .d-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.register-container .btn {
+    width: 48%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-container .btn-primary {
     background-color: #dc3545;
     color: white;
-    border: none;
-  }
-  
-  .register-btn-secondary {
-    background-color: #ffffff;
-    color: #dc3545;
-    border: 1px solid #dc3545;
-  }
-  
-  /* Bootstrap adjustments */
-  .custom-datepicker {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #c0a0a0;
-    border-radius: 5px;
-    background-color: #fff0f0;
-  }
-  
-  .error-message {
-    color: #d32f2f;
-    font-weight: bold;
-    margin-top: -10px;
-  }
-  
+}
+
+.register-container .btn-primary:hover {
+    background-color: #c82333;
+}
+
+.register-container .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.register-container .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.register-container img {
+    display: block;
+    margin: 1rem auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #dc3545;
+}
