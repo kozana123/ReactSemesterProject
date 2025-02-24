@@ -108,85 +108,88 @@ export default function ContinueRegister(props) {
   };
 
   return (
+    <div className="register-container">
     <div className="container mt-5">
-    <div className="card p-4 shadow-lg">
-      <h1 className="text-center mb-4">Complete Your Profile</h1>
-      <label>Name:</label>
-      <input type="text" className="form-control" onChange={chgName} />
-      
-      <label>Gender:</label>
-      <select className="form-select" onChange={chgGender}>
-        <option value="">Select a Gender</option>
-        <option value="Female">Female</option>
-        <option value="Male">Male</option>
-        <option value="Other">Other</option>
-      </select>
-      
-      <label>Birth Date:</label>
-      <DatePicker selected={newUser.birthDay} onChange={handleDateChange} dateFormat="dd/MM/yyyy" maxDate={new Date()} showYearDropdown scrollableYearDropdown placeholderText="Select your birth date" className="form-control" />
-      {error && <p className="text-danger">{error}</p>}
-
-      <label>Phone:</label>
-      <input type="text" className="form-control" onChange={chgPhone} />
-      {phoneError && <p className="text-danger">{phoneError}</p>}
-      
-      <label>City:</label>
-      <select className="form-select" onChange={chgCity}>
-        <option value="">Select a city</option>
-        <option value="Tel Aviv">Tel Aviv</option>
-        <option value="Jerusalem">Jerusalem</option>
-        <option value="Haifa">Haifa</option>
-        <option value="Be'er Sheva">Be'er Sheva</option>
-        <option value="Eilat">Eilat</option>
-        <option value="Ashdod">Ashdod</option>
-        <option value="Ashkelon">Ashkelon</option>
-        <option value="Rishon LeZion">Rishon LeZion</option>
-        <option value="Petah Tikva">Petah Tikva</option>
-        <option value="Holon">Holon</option>
-        <option value="Bat Yam">Bat Yam</option>
-        <option value="Netanya">Netanya</option>
-        <option value="Herzliya">Herzliya</option>
-        <option value="Ramat Gan">Ramat Gan</option>
-        <option value="Givatayim">Givatayim</option>
-        <option value="Kfar Saba">Kfar Saba</option>
-        <option value="Ra'anana">Ra'anana</option>
-        <option value="Modi'in-Maccabim-Re'ut">Modi'in-Maccabim-Re'ut</option>
-        <option value="Hod HaSharon">Hod HaSharon</option>
-        <option value="Rosh HaAyin">Rosh HaAyin</option>
-        <option value="Rehovot">Rehovot</option>
-        <option value="Lod">Lod</option>
-        <option value="Ramla">Ramla</option>
-        <option value="Kiryat Ono">Kiryat Ono</option>
-        <option value="Kiryat Bialik">Kiryat Bialik</option>
-        <option value="Kiryat Motzkin">Kiryat Motzkin</option>
-        <option value="Kiryat Yam">Kiryat Yam</option>
-        <option value="Kiryat Ata">Kiryat Ata</option>
-        <option value="Nazareth">Nazareth</option>
-        <option value="Afula">Afula</option>
-        <option value="Tiberias">Tiberias</option>
-        <option value="Zefat">Zefat</option>
-        <option value="Beit Shemesh">Beit Shemesh</option>
-        <option value="Yavne">Yavne</option>
-        <option value="Nes Ziona">Nes Ziona</option>
-        <option value="Or Yehuda">Or Yehuda</option>
-        <option value="Tirat Carmel">Tirat Carmel</option>
-        <option value="Dimona">Dimona</option>
-        <option value="Arad">Arad</option>
-        <option value="Sderot">Sderot</option>
-        <option value="Ma'ale Adumim">Ma'ale Adumim</option>
-        <option value="Karmiel">Karmiel</option>
-        <option value="Yokneam">Yokneam</option>
-      </select>
-
-      <label>Upload Profile Picture:</label>
-      <input type="file" className="form-control" accept="image/*" onChange={handleImageUpload} />
-      {newUser.image && <img src={newUser.image} alt="Profile Preview" className="rounded-circle mt-3" style={{ width: "150px", height: "150px", objectFit: "cover" }} />}
-      
-      <div className="d-flex justify-content-between mt-4">
-        <button className="btn btn-primary" onClick={ConfirmBtn}>Next</button>
-        <button className="btn btn-secondary" onClick={btnCheckIn}>Back</button>
+      <div className="card p-4 shadow-lg">
+        <h1 className="text-center mb-4">Complete Your Profile</h1>
+        <label>Name:</label>
+        <input type="text" className="form-control" onChange={chgName} />
+        
+        <label>Gender:</label>
+        <select className="form-select" onChange={chgGender}>
+          <option value="">Select a Gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+        </select>
+        
+        <label>Birth Date:</label>
+        <DatePicker selected={newUser.birthDay} onChange={handleDateChange} dateFormat="dd/MM/yyyy" maxDate={new Date()} showYearDropdown scrollableYearDropdown placeholderText="Select your birth date" className="form-control" />
+        {error && <p className="text-danger">{error}</p>}
+  
+        <label>Phone:</label>
+        <input type="text" className="form-control" onChange={chgPhone} />
+        {phoneError && <p className="text-danger">{phoneError}</p>}
+        
+        <label>City:</label>
+        <select className="form-select" onChange={chgCity}>
+          <option value="">Select a city</option>
+          <option value="Tel Aviv">Tel Aviv</option>
+          <option value="Jerusalem">Jerusalem</option>
+          <option value="Haifa">Haifa</option>
+          <option value="Be'er Sheva">Be'er Sheva</option>
+          <option value="Eilat">Eilat</option>
+          <option value="Ashdod">Ashdod</option>
+          <option value="Ashkelon">Ashkelon</option>
+          <option value="Rishon LeZion">Rishon LeZion</option>
+          <option value="Petah Tikva">Petah Tikva</option>
+          <option value="Holon">Holon</option>
+          <option value="Bat Yam">Bat Yam</option>
+          <option value="Netanya">Netanya</option>
+          <option value="Herzliya">Herzliya</option>
+          <option value="Ramat Gan">Ramat Gan</option>
+          <option value="Givatayim">Givatayim</option>
+          <option value="Kfar Saba">Kfar Saba</option>
+          <option value="Ra'anana">Ra'anana</option>
+          <option value="Modi'in-Maccabim-Re'ut">Modi'in-Maccabim-Re'ut</option>
+          <option value="Hod HaSharon">Hod HaSharon</option>
+          <option value="Rosh HaAyin">Rosh HaAyin</option>
+          <option value="Rehovot">Rehovot</option>
+          <option value="Lod">Lod</option>
+          <option value="Ramla">Ramla</option>
+          <option value="Kiryat Ono">Kiryat Ono</option>
+          <option value="Kiryat Bialik">Kiryat Bialik</option>
+          <option value="Kiryat Motzkin">Kiryat Motzkin</option>
+          <option value="Kiryat Yam">Kiryat Yam</option>
+          <option value="Kiryat Ata">Kiryat Ata</option>
+          <option value="Nazareth">Nazareth</option>
+          <option value="Afula">Afula</option>
+          <option value="Tiberias">Tiberias</option>
+          <option value="Zefat">Zefat</option>
+          <option value="Beit Shemesh">Beit Shemesh</option>
+          <option value="Yavne">Yavne</option>
+          <option value="Nes Ziona">Nes Ziona</option>
+          <option value="Or Yehuda">Or Yehuda</option>
+          <option value="Tirat Carmel">Tirat Carmel</option>
+          <option value="Dimona">Dimona</option>
+          <option value="Arad">Arad</option>
+          <option value="Sderot">Sderot</option>
+          <option value="Ma'ale Adumim">Ma'ale Adumim</option>
+          <option value="Karmiel">Karmiel</option>
+          <option value="Yokneam">Yokneam</option>
+        </select>
+  
+        <label>Upload Profile Picture:</label>
+        <input type="file" className="form-control" accept="image/*" onChange={handleImageUpload} />
+        {newUser.image && <img src={newUser.image} alt="Profile Preview" className="rounded-circle mt-3" style={{ width: "150px", height: "150px", objectFit: "cover" }} />}
+        
+        <div className="d-flex justify-content-between mt-4">
+          <button className="btn btn-primary" onClick={ConfirmBtn}>Next</button>
+          <button className="btn btn-secondary" onClick={btnCheckIn}>Back</button>
+        </div>
       </div>
     </div>
   </div>
+  
   );
 }

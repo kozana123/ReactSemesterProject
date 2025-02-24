@@ -1,9 +1,10 @@
-.register-container .container {
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f8f9fa;
+    height: 150vh;
+    background-color: #5a3a3d;
+    
 }
 
 .register-container .card {
@@ -11,14 +12,19 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
+    color: rgb(45, 20, 20);
+    margin-bottom: 50px;
+    
 }
 
 .register-container h1 {
-    text-align: center;
-    color: #dc3545;
-    margin-bottom: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #3a1a1d;
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
 }
 
 .register-container label {
@@ -36,7 +42,7 @@
 }
 
 .register-container .text-danger {
-    color: red;
+    color: rgb(25, 27, 113);
     font-size: 0.875rem;
 }
 
@@ -55,12 +61,13 @@
 }
 
 .register-container .btn-primary {
-    background-color: #dc3545;
-    color: white;
+    background-color: #9b6060;
+    color: rgb(252, 245, 245);
+    border: 1px solid rgb(120, 60, 60);
 }
 
 .register-container .btn-primary:hover {
-    background-color: #c82333;
+    background-color: #2b23c8;
 }
 
 .register-container .btn-secondary {
@@ -79,5 +86,5 @@
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #dc3545;
+    
 }

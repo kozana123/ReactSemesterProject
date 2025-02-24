@@ -10,7 +10,7 @@
   
 
   .welcome-card {
-    background-color: #fefafa;
+    background-color: #eeeaea;
     color: rgb(45, 20, 20);
     padding: 30px;
     border-radius: 10px;
@@ -28,6 +28,12 @@
     font-family: "Arimo", sans-serif;
     font-weight: 400;
   }
+
+ /* .form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+ } */
   
   .welcome-img {
     max-width: 50%; 

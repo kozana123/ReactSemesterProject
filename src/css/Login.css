@@ -16,11 +16,11 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(219, 212, 212, 0.232);
   width: 100%;
-  max-width: 360px; /* Ensures it doesn't exceed screen width */
+  max-width: 360px; 
   text-align: center;
 }
 
-/* Title */
+
 .login-title {
   font-weight: bold;
   margin-bottom: 20px;
@@ -28,7 +28,7 @@
   font-weight: 400;
 }
 
-/* Form */
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  width: 50%; /* Prevents overflow */
+  width: 50%; 
   box-sizing: border-box;
   margin: auto;
   
