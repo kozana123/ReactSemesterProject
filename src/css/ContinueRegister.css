@@ -1,4 +1,4 @@
-.register-container {
+.register-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +61,7 @@
 }
 
 .register-container .btn-primary {
-    background-color: #9b6060;
+    color: rgb(70, 43, 43);
     color: rgb(252, 245, 245);
     border: 1px solid rgb(120, 60, 60);
 }
@@ -76,7 +76,7 @@
 }
 
 .register-container .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: #e0e6eb;
 }
 
 .register-container img {

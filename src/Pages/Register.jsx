@@ -38,11 +38,10 @@ export default function Register(props) {
   };
 
   return (
-<div className="register-container">
-  <div className="register-card">
-    <h1 className="register-title">Register</h1>
-    
+    <div className="register-container-">
+    <div className="register-card">
     <div className="register-form">
+    <h1 className="register-title">Register</h1>
       <label className="register-label">Email:</label>
       <input 
         type="text" 
@@ -68,6 +67,5 @@ export default function Register(props) {
     </div>
   </div>
 </div>
-
   );
 }
