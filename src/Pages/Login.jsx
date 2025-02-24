@@ -11,8 +11,9 @@ export default function Login(props) {
   const [user, setUser] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
+  console.log(usersDetails);
   const btnCheckIn = () => {
-    navigate("/Register", { state: usersDetails });
+    navigate("/Register");
   };
 
   const btnHP = () => {
@@ -23,7 +24,7 @@ export default function Login(props) {
     );
 
     if (foundUser) {
-      console.log("exist");
+      navigate("/MainPage");
     } else {
       setError("Invalid email or password");
     }

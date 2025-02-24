@@ -6,9 +6,11 @@ import { DataContext } from "./AppDB";
 import "../css/Register.css";
 
 export default function Register(props) {
+
   const { usersDetails } = useContext(DataContext);
   const navigate = useNavigate();
   const [newUser, setNewUser] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
 
   const ConfirmBtn = () => {
     let isExist = false;
@@ -21,7 +23,18 @@ export default function Register(props) {
     }
 
     if (isExist == false) {
-      navigate("/ContinueRegister", { state: newUser });
+      const foundUser = usersDetails.find(
+        (userDetails) =>
+          userDetails.email === newUser.email
+      );
+      
+      if(foundUser){
+        setError("This Email is already in use");
+      }
+      else{
+        navigate("/ContinueRegister", { state: newUser });
+      }
+      
     }
   };
 
@@ -56,7 +69,7 @@ export default function Register(props) {
         onChange={chgPassword} 
       />
     </div>
-
+    {error && <p className="login-error">{error}</p>}
     <div className="register-buttons">
       <button className="register-btn register-btn-primary" onClick={ConfirmBtn}>
         Next
