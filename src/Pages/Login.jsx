@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useContext } from "react";
 import { DataContext } from "./AppDB";
 import "../css/Login.css";
+import { Card, Button, Form, Alert, Container } from "react-bootstrap";
+
 
 export default function Login(props) {
   const navigate = useNavigate();
@@ -39,40 +41,52 @@ export default function Login(props) {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h1 className="login-title">Loviow</h1>
-        <img
-          src="/public/Pictures/video_movie_player_clip-09-512.webp"
-          alt=""
-          style={{ width: 150 }}
-        />
-        <br />
-        <div className="login-form">
-          <label className="login-label">Email:</label>
-          <input type="email" className="login-input" onChange={chgUserName} />
-
-          <label className="login-label">Password:</label>
-          <input
-            type="password"
-            className="login-input"
-            onChange={chgPassword}
+<Container className="d-flex justify-content-center align-items-center vh-100 login-container">
+      <Card className="p-4 login-card shadow-lg">
+        <Card.Body className="text-center">
+          <Card.Title className="login-title">Loviow</Card.Title>
+          <img
+            src="/public/Pictures/video_movie_player_clip-09-512.webp"
+            alt="Logo"
+            style={{ width: 150 }}
           />
-        </div>
+          <br />
+          <Form className="login-form">
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label className="login-label">Email:</Form.Label>
+              <Form.Control
+                type="email"
+                className="login-input"
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+              />
+            </Form.Group>
 
-        {error && <p className="login-error">{error}</p>}
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label className="login-label">Password:</Form.Label>
+              <Form.Control
+                type="password"
+                className="login-input"
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+              />
+            </Form.Group>
+          </Form>
 
-        <div className="login-buttons">
-          <button className="login-btn login-btn-primary" onClick={btnHP}>
-            Login
-          </button>
-          <button
-            className="login-btn login-btn-secondary"
-            onClick={btnCheckIn}
-          >Don't have an account? Register here..
-          </button>
-        </div>
-      </div>
-    </div>
+          {error && <Alert variant="danger" className="login-error">{error}</Alert>}
+
+          <div className="login-buttons d-grid gap-2">
+            <Button variant="primary" className="login-btn" onClick={btnHP}>
+              Login
+            </Button>
+            <Button
+              variant="outline-secondary"
+              className="login-btn-"
+              onClick={btnCheckIn}
+            >
+              Don't have an account? Register here..
+            </Button>
+          </div>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 }

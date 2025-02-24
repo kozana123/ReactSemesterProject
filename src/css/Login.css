@@ -76,13 +76,14 @@
   
 }
 
-.login-btn-primary {
+.login-btn {
   background-color: #916c6c;
   color: white;
   border: none;
+  
 }
 
-.login-btn-secondary {
+.login-btn- {
   background-color: transparent;
   color: rgb(70, 43, 43);
   width: 100%;

@@ -1,11 +1,11 @@
-.register-card {
+.register-card- {
   background-color: #eeeaea;
   color: rgb(45, 20, 20);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 360px; 
+  max-width: 400px; 
   text-align: center;
 }
 
@@ -24,6 +24,7 @@
 .register-title {
   font-family: "Arimo", sans-serif;
   font-weight: 700;
+
 }
 
 .register-input {
@@ -75,14 +76,9 @@
   text-align: center;
 }
 
-.register-btn-primary {
+.register-btn {
   background-color: rgb(145, 100, 100);
   color: rgb(252, 246, 246);
   border: none;
 }
 
-.register-btn-secondary {
-  background-color: rgb(145, 100, 100);
-  color: rgb(230, 222, 222);
-  border: 1px solid rgb(120, 60, 60);
-}

@@ -3,7 +3,10 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
 import { DataContext } from "./AppDB";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/Register.css";
+import { Card, Button, Form, Alert, Container } from "react-bootstrap";
+
 
 export default function Register(props) {
 
@@ -51,34 +54,40 @@ export default function Register(props) {
   };
 
   return (
-    <div className="register-container-">
-    <div className="register-card">
-    <div className="register-form">
-    <h1 className="register-title">Register</h1>
-      <label className="register-label">Email:</label>
-      <input 
-        type="text" 
-        className="register-input" 
-        onChange={chgEmail} 
-      />
+    <Container className="register-container-">
+    <Card className="register-card-">
+      <Card.Body>
+        <Card.Title className="register-title">Register</Card.Title>
+        <Form className="register-form">
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label className="register-label">Email:</Form.Label>
+            <Form.Control
+              type="email"
+              className="register-input"
+              onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
+            />
+          </Form.Group>
 
-      <label className="register-label">Password:</label>
-      <input 
-        type="password" 
-        className="register-input" 
-        onChange={chgPassword} 
-      />
-    </div>
-    {error && <p className="login-error">{error}</p>}
-    <div className="register-buttons">
-      <button className="register-btn register-btn-primary" onClick={ConfirmBtn}>
-        Next
-      </button>
-      <button className="register-btn register-btn-secondary" onClick={btnCheckIn}>
-        Back
-      </button>
-    </div>
-  </div>
-</div>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label className="register-label">Password:</Form.Label>
+            <Form.Control
+              type="password"
+              className="register-input"
+              onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
+            />
+          </Form.Group>
+        </Form>
+
+        {error && <Alert variant="danger" className="register-error">{error}</Alert>}
+
+        <div className="register-buttons">
+          <Button variant="primary" className="register-btn" onClick={ConfirmBtn}>
+            Next
+          </Button>
+          <Button variant="secondary" className="register-btn" onClick={() => navigate("/")}>Back</Button>
+        </div>
+      </Card.Body>
+    </Card>
+  </Container>
   );
 }
