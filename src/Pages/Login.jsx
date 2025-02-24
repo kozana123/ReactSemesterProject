@@ -44,7 +44,7 @@ export default function Login(props) {
         <img
           src="/public/Pictures/video_movie_player_clip-09-512.webp"
           alt=""
-          style={{ width: 250 }}
+          style={{ width: 150 }}
         />
         <br />
         <div className="login-form">
@@ -68,8 +68,7 @@ export default function Login(props) {
           <button
             className="login-btn login-btn-secondary"
             onClick={btnCheckIn}
-          >
-            Don't have an account? Register here
+          >Don't have an account? Register here..
           </button>
         </div>
       </div>

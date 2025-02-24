@@ -22,9 +22,10 @@
 
 /* Title */
 .login-title {
-  font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
 }
 
 /* Form */
