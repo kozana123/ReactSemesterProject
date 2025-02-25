@@ -7,7 +7,7 @@ export default function Edit() {
   const { AddUserPreference, usersDetails } = useContext(DataContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const state = location.state || {};
+  const state = location.state
 
   const [userPreference, setUserPreference] = useState({
     uniqeId: state.uniqeId,
@@ -69,7 +69,7 @@ export default function Edit() {
       userPreference.isSmoke
     );
     console.log("User preferences saved:", userPreference);
-    navigate("/MainPage");
+    navigate("/MainPage", {state: state});
   };
 
   return (
@@ -167,6 +167,7 @@ export default function Edit() {
               Save
             </button>
           </div>
+          
           {console.log(usersDetails)}
         </div>
       </div>

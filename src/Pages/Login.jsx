@@ -6,12 +6,12 @@ import { DataContext } from "./AppDB";
 import "../css/Login.css";
 import { Card, Button, Form, Alert, Container } from "react-bootstrap";
 
-
 export default function Login(props) {
   const navigate = useNavigate();
   const { usersDetails } = useContext(DataContext);
   const [user, setUser] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  
 
   console.log(usersDetails);
   const btnCheckIn = () => {
@@ -26,7 +26,7 @@ export default function Login(props) {
     );
 
     if (foundUser) {
-      navigate("/MainPage");
+      navigate("/MainPage", {state: foundUser});
     } else {
       setError("Invalid email or password");
     }

@@ -10,7 +10,7 @@ export default function AppDB(props) {
 
     const [usersDetails, setUserDetails] = useState(() => {
       const storedUsers = localStorage.getItem('usersDetails');
-      return storedUsers ? JSON.parse(storedUsers) : [{ uniqeIdUser: 1, name: 'Dor', birthDay: '12/12/2020', email: '', phone: '', city: '', gender: '', password: '1234', image: '' }];
+      return storedUsers ? JSON.parse(storedUsers) : [{ uniqeId: 1, name: 'Dor', birthDay: '12/12/2020', email: '', phone: '', city: '', gender: '', password: '1234', image: '' }];
     });
     const [userPreference , setUserPreference] = useState(() => {
       const storedPreferences = localStorage.getItem('userPreference');
@@ -23,14 +23,26 @@ export default function AppDB(props) {
       localStorage.setItem('usersDetails', JSON.stringify(newUser));
     }
 
-    const AddUserPreference = (uniqeIdUser , preferredPartner , relationshipType , height , religion , isSmoke) => {
-      let newUserPreference = [...userPreference, {uniqeIdUser, preferredPartner, relationshipType, height, religion, isSmoke}];
+    const AddUserPreference = (uniqeId , preferredPartner , relationshipType , height , religion , isSmoke) => {
+      let newUserPreference = [...userPreference, {uniqeId, preferredPartner, relationshipType, height, religion, isSmoke}];
       // setUserPreference(newUserPreference);
       localStorage.setItem('userPreference', JSON.stringify(newUserPreference));
     }
+
+    const updateUserPreference = (uniqeId , preferredPartner , relationshipType , height , religion , isSmoke) => {
+      console.log(uniqeId);
+      
+      // Find the user by uniqeId and update the values
+      const updatedPreferences = userPreference.map(user => 
+        user.uniqeId === uniqeId ? { ...user, uniqeId , preferredPartner , relationshipType , height , religion , isSmoke } : user
+      );
+      setUserPreference(updatedPreferences);
+      localStorage.setItem('userPreference', JSON.stringify(updatedPreferences));
+
+    };
     
   return (
-    <DataContext.Provider value = {{usersDetails,setUserDetails, userPreference,setUserPreference, AddUser, AddUserPreference}}>
+    <DataContext.Provider value = {{usersDetails,setUserDetails, userPreference,setUserPreference, AddUser, AddUserPreference, updateUserPreference}}>
         {props.children}
     </DataContext.Provider>
   )

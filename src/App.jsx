@@ -6,6 +6,7 @@ import WelcomePage from './Pages/welcomePage'
 import ContinueRegister from './Pages/ContinueRegister'
 import Edit from './Pages/Edit'
 import MainPage from './Pages/MainPage'
+import ConnectedUserEdit from './Pages/ConnectedUserEdit'
 
 
 
@@ -21,6 +22,7 @@ function App(props) {
         <Route path="/ContinueRegister" element={<ContinueRegister/>} />
         <Route path="/Edit" element={<Edit/>} />
         <Route path="/MainPage" element={<MainPage/>} />
+        <Route path="/ConnectedUserEdit" element={<ConnectedUserEdit/>} />
       </Routes>
       </div>
     </>
