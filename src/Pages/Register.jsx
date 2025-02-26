@@ -69,7 +69,7 @@ export default function Register(props) {
 
         {error && <Alert variant="danger" className="register-error">{error}</Alert>}
 
-        <div className="d-grid gap-2 register-buttons">
+        <div className="register-buttons">
           <Button variant="primary" className="register-btn w-100" onClick={ConfirmBtn}>
             Next
           </Button>
