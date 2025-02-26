@@ -15,7 +15,8 @@ export default function MainPage() {
   const navigate = useNavigate();
   const loginUser = useLocation();
   const connectedUser = loginUser.state
-  console.log(connectedUser);
+  console.log(loginUser);
+  console.log("hi" , connectedUser);
   
   // const [currentUser, setCurrentUser] = useState(null);
 
@@ -50,9 +51,11 @@ export default function MainPage() {
           alt="Profile"
           className="profile-image"
         />
-        <div className="profile-info">
-          <h2>{connectedUser.name}</h2>
-        </div>
+      
+      
+          <h2 className="profile-info">{connectedUser.name} </h2>
+        
+        
       </div>
     ) : (
       <p className="loading-message">Loading user data...</p>

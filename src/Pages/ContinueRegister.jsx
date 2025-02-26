@@ -97,7 +97,7 @@ export default function ContinueRegister(props) {
       newUser.image
     );
   
-    navigate("/Edit", { state: {uniqeId: newUserId , image: newUser.image}});
+    navigate("/Edit", { state: {uniqeId: newUserId , image: newUser.image , name: newUser.name, birthDay: newUser.birthDay, email: newUser.email, phone: newUser.phone, city: newUser}});
   };
 
 

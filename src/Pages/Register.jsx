@@ -41,22 +41,11 @@ export default function Register(props) {
     }
   };
 
-  const btnCheckIn = () => {
-    navigate("/", { state: usersDetails });
-  };
-
-  const chgEmail = (e) => {
-    setNewUser({ ...newUser, email: e.target.value });
-  };
-
-  const chgPassword = (e) => {
-    setNewUser({ ...newUser, password: e.target.value });
-  };
 
   return (
-    <Container className="register-container-">
-    <Card className="register-card-">
-      <Card.Body>
+    <Container className="d-flex justify-content-center align-items-center vh-100 register-container1">
+    <Card className="p-4 register-card1 shadow-lg">
+      <Card.Body className="text-center">
         <Card.Title className="register-title">Register</Card.Title>
         <Form className="register-form">
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -80,11 +69,11 @@ export default function Register(props) {
 
         {error && <Alert variant="danger" className="register-error">{error}</Alert>}
 
-        <div className="register-buttons">
-          <Button variant="primary" className="register-btn" onClick={ConfirmBtn}>
+        <div className="d-grid gap-2 register-buttons">
+          <Button variant="primary" className="register-btn w-100" onClick={ConfirmBtn}>
             Next
           </Button>
-          <Button variant="secondary" className="register-btn" onClick={() => navigate("/")}>Back</Button>
+          <Button variant="secondary" className="register-btn w-100" onClick={() => navigate("/")}>Back</Button>
         </div>
       </Card.Body>
     </Card>

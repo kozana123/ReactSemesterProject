@@ -1,84 +1,84 @@
-.register-card- {
-  background-color: #eeeaea;
-  color: rgb(45, 20, 20);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 400px; 
-  text-align: center;
-}
+  .register-card1 {
+    background-color: #eeeaea;
+    color: rgb(45, 20, 20);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px; 
+    text-align: center;
+  }
 
-.form-control, .form-select {
-  color: black;}
+  .form-control, .form-select {
+    color: black;}
 
-.register-container- {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #5f3438;
-  padding: 15px;}
-  
+  .register-container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.register-title {
-  font-family: "Arimo", sans-serif;
-  font-weight: 700;
+    background-color: #5f3438;
+    padding: px;}
+    
 
-}
+  .register-title {
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
 
-.register-input {
-  font-family: "Arimo", sans-serif;
-  font-weight: 400;
-  color: black; 
-}
+  }
 
-.register-form {
-  text-align: center;
-}
+  .register-input {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+    color: black; 
+  }
 
-.register-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #4d2225;
-}
+  .register-form {
+    text-align: center;
+  }
 
-.register-input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 2px solid #c0a0a0;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #151111;
-}
+  .register-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4d2225;
+  }
 
-.register-error {
-  color: #d32f2f;
-  font-weight: bold;
-}
+  .register-input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #c0a0a0;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #151111;
+  }
 
-.register-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: center;
-}
+  .register-error {
+    color: #d32f2f;
+    font-weight: bold;
+  }
 
-.register-btn {
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 45%;
-  box-sizing: border-box;
-  text-align: center;
-}
+  .register-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
 
-.register-btn {
-  background-color: rgb(145, 100, 100);
-  color: rgb(252, 246, 246);
-  border: none;
-}
+  .register-btn {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 45%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .register-btn {
+    background-color: rgb(145, 100, 100);
+    color: rgb(252, 246, 246);
+    border: none;
+  }
 

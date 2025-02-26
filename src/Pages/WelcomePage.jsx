@@ -28,7 +28,7 @@ export default function WelcomePage() {
             alt="Welcome" 
             className="welcome-img"
         />
-        
+    
         <div className="welcome-buttons">
             <button className="welcome-btn welcome-btn-primary" onClick={btnLogin}>Login</button>
             <button className="welcome-btn welcome-btn-secondary" onClick={btnRegister}>Register</button>
