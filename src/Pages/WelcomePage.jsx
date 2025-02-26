@@ -29,7 +29,7 @@ export default function WelcomePage() {
             className="welcome-img"
         />
     
-        <div className="welcome-buttons">
+        <div className="welcome-buttons" style={{fontFamily: "Comic sans MS, sans-serif"}}>
             <button className="welcome-btn welcome-btn-primary" onClick={btnLogin}>Login</button>
             <button className="welcome-btn welcome-btn-secondary" onClick={btnRegister}>Register</button>
         </div>

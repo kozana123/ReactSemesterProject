@@ -110,8 +110,8 @@ export default function ContinueRegister(props) {
 
   return (
     <div className="register-container">
-    <div className="container mt-5">
-      <div className="card p-4 shadow-lg">
+    <div className="container mt-5" style={{ fontFamily: "Comic sans MS ,sans-serif"}}>
+      <div className="card p-4 shadow-lg" >
         <h1 className="text-center mb-4">Complete Your Profile</h1>
         <label>Name:</label>
         <input type="text" className="form-control" onChange={chgName} />

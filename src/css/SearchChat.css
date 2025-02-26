@@ -1,0 +1,20 @@
+.SearchChat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5f3438;
+    padding: 15px;
+  }
+  
+  /* Login card */
+.SearchChat-card {
+    background-color: #eeeaea;
+    color: rgb(43, 19, 19);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(219, 212, 212, 0.232);
+    width: 100%;
+    max-width: 360px; 
+    text-align: center;
+  }

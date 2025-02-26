@@ -77,11 +77,11 @@ export default function Edit() {
     <div className="preferences-container">
       <div className="preferences-card">
         <h1 className="title">Set Your Preferences</h1>
-        <div className="preferences-form">
+        <div className="preferences-form" style={{fontFamily: "Comic sans MS, sans-serif" }}>
           <label>Preferred Partner:</label>
           <select
             type="text"
-            className="register-input"
+            className="register-input" style={{backgroundColor: "white"}}
             name="preferredPartner"
             value={userPreference.preferredPartner}
             onChange={chg}
@@ -96,6 +96,7 @@ export default function Edit() {
           <select
             className="register-input"
             name="relationshipType"
+            style={{backgroundColor: "white"}}
             value={userPreference.relationshipType}
             onChange={chg}
           >
@@ -110,6 +111,7 @@ export default function Edit() {
             type="text"
             className="register-input"
             name="height"
+            style={{backgroundColor: "white"}}
             value={userPreference.height}
             onChange={handleHeightChange}
           />
@@ -119,6 +121,7 @@ export default function Edit() {
           <select
             className="register-input"
             name="religion"
+            style={{backgroundColor: "white"}}
             value={userPreference.religion}
             onChange={chg}
           >
@@ -130,15 +133,16 @@ export default function Edit() {
           </select>
 
           <label>Smoke:</label>
-          <div className="checkbox-group">
+          <div className="checkbox-group" >
             <label
               className={`checkbox-label ${
                 userPreference.isSmoke === "yes" ? "selected" : ""
-              }`}
+              }`} style={{backgroundColor: "white" }}
             >
               <input
                 type="checkbox"
                 name="isSmoke"
+               zx
                 checked={userPreference.isSmoke === "yes"}
                 onChange={() =>
                   chg({ target: { name: "isSmoke", value: "yes" } })
@@ -150,11 +154,13 @@ export default function Edit() {
             <label
               className={`checkbox-label ${
                 userPreference.isSmoke === "no" ? "selected" : ""
-              }`}
+               }`} style={{backgroundColor: "white" }}
             >
+            
               <input
                 type="checkbox"
                 name="isSmoke"
+                style={{backgroundColor: "#7f4c4c"}}
                 checked={userPreference.isSmoke === "no"}
                 onChange={() =>
                   chg({ target: { name: "isSmoke", value: "no" } })

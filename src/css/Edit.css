@@ -22,7 +22,7 @@
   
 
   .title {
-    font-family: "Arimo", sans-serif;
+    font-family: "Comic sans MS", sans-serif;
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -34,6 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
   }
   
 
@@ -41,9 +42,10 @@
     font-weight: bold;
     color: #4d2225;
     text-align: left;
+    
   }
   
-  
+/*   
   .register-input {
     padding: 12px;
     border: 2px solid #c0a0a0;
@@ -54,7 +56,7 @@
     background-color: #f6f6f6;
     color: #333;
   }
-  
+   */
 
   .register-input:focus {
     outline: none;
@@ -67,10 +69,10 @@
     gap: 20px;
     justify-content: center;
     margin: 10px 0;
+    border: #4d2225;
+    
   }
-  
-  /* עיצוב כללי של תוויות Checkboxes */
-  .checkbox-label {
+    .checkbox-label {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -78,14 +80,11 @@
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    border: 2px solid transparent;
+    border: 2px solid  #a03e3e;
     transition: all 0.3s ease-in-out;
   }
   
-  /* ביטול תצוגת ה-Checkbox הרגיל */
-  .checkbox-label input {
-    display: none;
-  }
+
   
   /* עיצוב כאשר נבחר */
   .checkbox-label.selected {
@@ -102,17 +101,15 @@
     text-align: left;
   }
   
-  /* עיצוב הכפתורים */
-  .register-buttons {
+  /* .register-buttons {
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
-  }
+  } */
   
-  /* עיצוב כללי לכפתורים */
-  .register-btn {
+  /* .register-btn {
     padding: 12px;
     border-radius: 6px;
     font-size: 16px;
@@ -122,23 +119,24 @@
     text-align: center;
     transition: 0.3s ease-in-out;
   }
-  
-  /* כפתור שמירה */
+   */
+  /* כפתור שמירה
   .register-btn.next {
     background-color: #9b6060;
     color: white;
     border: none;
   }
-  
+   */
   .register-btn.next:hover {
     background-color: #7f4c4c;
   }
   
   /* כפתור חזור */
   .register-btn.back {
-    background-color: #935d5d;
+    background-color: #837979;
     color: white;
-    border: 1px solid rgb(120, 60, 60);
+    border: none;
+
   }
   
   .register-btn.back:hover {

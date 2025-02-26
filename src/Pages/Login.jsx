@@ -44,7 +44,7 @@ export default function Login(props) {
 <Container className="d-flex justify-content-center align-items-center vh-100 login-container">
       <Card className="p-4 login-card shadow-lg">
         <Card.Body className="text-center">
-          <Card.Title className="login-title">Loviow</Card.Title>
+          <Card.Title className="login-title" style={{fontWeight: "bold"  ,fontSize:"40px"}}>Loviow</Card.Title>
           <img
             src="/public/Pictures/video_movie_player_clip-09-512.webp"
             alt="Logo"
@@ -53,7 +53,7 @@ export default function Login(props) {
           <br />
           <Form className="login-form">
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label className="login-label">Email:</Form.Label>
+              <Form.Label className="login-label"  style={{fontFamily: "Comic sans MS, sans-serif"}}>Email:</Form.Label>
               <Form.Control
                 type="email"
                 className="login-input"
@@ -62,7 +62,7 @@ export default function Login(props) {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className="login-label">Password:</Form.Label>
+              <Form.Label className="login-label"  style={{fontFamily: "Comic sans MS, sans-serif"}}>Password:</Form.Label>
               <Form.Control
                 type="password"
                 className="login-input"

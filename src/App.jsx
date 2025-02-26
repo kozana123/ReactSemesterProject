@@ -1,12 +1,15 @@
-import './App.css'
+import './css/App.css';
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
-import WelcomePage from './Pages/welcomePage'
+import WelcomePage from './Pages/WelcomePage'
 import ContinueRegister from './Pages/ContinueRegister'
 import Edit from './Pages/Edit'
 import MainPage from './Pages/MainPage'
 import ConnectedUserEdit from './Pages/ConnectedUserEdit'
+import SearchChat from './Pages/SearchChat'
+import Setting from './Pages/Setting'
+
 
 
 
@@ -23,6 +26,8 @@ function App(props) {
         <Route path="/Edit" element={<Edit/>} />
         <Route path="/MainPage" element={<MainPage/>} />
         <Route path="/ConnectedUserEdit" element={<ConnectedUserEdit/>} />
+        <Route path="/SearchChat" element={<SearchChat/>} />
+        <Route path='/Setting' element={<Setting/>} />
       </Routes>
       </div>
     </>

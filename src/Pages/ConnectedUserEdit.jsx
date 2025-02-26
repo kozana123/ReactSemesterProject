@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { DataContext } from "./AppDB";
 import { useContext } from "react";
+import "../css/Edit.css";
+
 
 
 
@@ -88,8 +90,8 @@ export default function ConnectedUserEdit() {
   
     return (
       <div className="preferences-container">
-        <div className="preferences-card">
-          <h1 className="title">Set Your Preferences</h1>
+        <div className="preferences-card" style={{fontFamily: "Comic sans MS, sans-serif"}}>
+          <h1 className="title"  style={{fontFamily: "Comic sans MS, sans-serif"}}> Set Your Preferences</h1>
           <div className="preferences-form">
             <label>Preferred Partner:</label>
             <select
@@ -180,12 +182,11 @@ export default function ConnectedUserEdit() {
               <button className="register-btn next" onClick={savePrefs}>
                 Save
               </button>
-            </div>
-            <div className=".register-btn.back">
-              <button className=".register-btn.back" onClick={backBtn}>
+              <button className="register-btn back" onClick={backBtn}>
                 Back
               </button>
             </div>
+          
           </div>
         </div>
       </div>

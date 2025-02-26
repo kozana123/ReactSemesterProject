@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { DataContext } from "./AppDB";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/Register.css";
-import { Card, Button, Form, Alert, Container } from "react-bootstrap";
+import { Card, Button, Form, Alert, Container , } from "react-bootstrap";
 
 
 export default function Register(props) {
@@ -43,13 +43,13 @@ export default function Register(props) {
 
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-100 register-container1">
-    <Card className="p-4 register-card1 shadow-lg">
-      <Card.Body className="text-center">
-        <Card.Title className="register-title">Register</Card.Title>
+  <Container className="d-flex justify-content-center align-items-center vh-100 register-container1" style={{padding:"20px"}}>
+    <Card className="p-4 register-card1 shadow-lg" style={{width:"400px" , padding:"50px"}}>
+      <Card.Body className="text-center" >
+        <Card.Title className="register-title" style={{fontFamily: "Comic sans MS, sans-serif" ,fontSize:"30px" , fontWeight:"400" , marginBottom:"30px"}}>Register</Card.Title>
         <Form className="register-form">
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label className="register-label">Email:</Form.Label>
+            <Form.Label className="register-label" style={{fontFamily: "Comic sans MS, sans-serif"}}>Email:</Form.Label>
             <Form.Control
               type="email"
               className="register-input"
@@ -58,7 +58,7 @@ export default function Register(props) {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="register-label">Password:</Form.Label>
+            <Form.Label className="register-label" style={{fontFamily: "Comic sans MS, sans-serif"}}>Password:</Form.Label>
             <Form.Control
               type="password"
               className="register-input"
@@ -69,7 +69,7 @@ export default function Register(props) {
 
         {error && <Alert variant="danger" className="register-error">{error}</Alert>}
 
-        <div className="register-buttons">
+        <div className="register-buttons" style={{fontFamily: "Comic sans MS, sans-serif"}}>
           <Button variant="primary" className="register-btn w-100" onClick={ConfirmBtn}>
             Next
           </Button>
