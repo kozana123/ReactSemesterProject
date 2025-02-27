@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export default function MainPage() {
   const { userPreference, AddusersInSearch } = useContext(DataContext);
   const navigate = useNavigate();
-  const loginUser = useLocation();
+   const loginUser = useLocation();
   const connectedUser = loginUser.state;
   console.log(loginUser);
   console.log("hi", connectedUser);

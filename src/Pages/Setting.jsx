@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { DataContext } from "./AppDB";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Container , Card , Button} from "react-bootstrap";
+
+
 
 export default function Setting() {
   const { deleteUser } = useContext(DataContext);
@@ -9,19 +12,31 @@ export default function Setting() {
   const connectedUser = location.state;
 
   const handleDelete = () => {
-    const isConfirmed = window.confirm("Are you sure you want to delete your account?");
+    const isConfirmed = window.confirm(
+      "Are you sure you want to delete your account?"
+    );
     if (isConfirmed) {
       deleteUser(connectedUser.uniqeId);
-      navigate("/"); 
+      navigate("/");
     }
   };
 
   return (
-    <div>
-      <h1>Settings</h1>
-      <button onClick={handleDelete} style={{ backgroundColor: "red", color: "white", padding: "10px 20px", border: "none", cursor: "pointer" }}>
-        Delete Account
-      </button>
-    </div>
+    <Container className="register-container">
+      <Card className="register-container card">
+        <h1>Settings</h1>
+        <Button
+          onClick={handleDelete}
+          style={{
+            backgroundColor: "#9b6060",
+            color: "white",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Delete Account
+        </Button>
+      </Card>
+    </Container>
   );
 }
