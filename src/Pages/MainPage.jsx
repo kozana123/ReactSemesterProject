@@ -35,7 +35,7 @@ export default function MainPage() {
     );
     console.log(connectedUserPreference);
     navigate("/ConnectedUserEdit", {
-      state: { connectedUser, connectedUserPreference },
+      state: { connectedUser, connectedUserPreference }
     });
   };
 
