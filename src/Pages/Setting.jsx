@@ -36,6 +36,10 @@ export default function Setting() {
         >
           Delete Account
         </Button>
+
+        <Button >
+          
+        </Button>
       </Card>
     </Container>
   );

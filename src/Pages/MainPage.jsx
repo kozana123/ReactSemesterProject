@@ -34,9 +34,8 @@ export default function MainPage() {
         checkUserPreference.uniqeId === connectedUser.uniqeId
     );
     console.log(connectedUserPreference);
-    navigate("/ConnectedUserEdit", {
-      state: { connectedUser, connectedUserPreference }
-    });
+    navigate("/ConnectedUserEdit", { state: { connectedUser, connectedUserPreference } });
+
   };
 
   const EnterSearchChat = () => {
