@@ -73,7 +73,7 @@ export default function MainPage() {
         <div className="profile-card" onClick={moveToEdit}>
           <div className="profile-image-wrapper">
             <img
-              src={connectedUser.image} // תמונת ברירת מחדל
+              src={connectedUser.image} 
               alt="Profile"
               className="profile-image"
             />
