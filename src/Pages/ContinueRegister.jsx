@@ -7,25 +7,24 @@ import { DataContext } from "./AppDB";
 import "../css/ContinueRegister.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { v4 as uuidv4 } from 'uuid';
-
-
+import { v4 as uuidv4 } from "uuid";
 
 export default function ContinueRegister(props) {
   const { AddUser } = useContext(DataContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const state = location.state;
 
-  const state = location.state || {};
-  console.log("State received in ContinueRegister:", state);
-  useEffect(() => {
-    if (!state.email || !state.password) {
-      console.log("No state found, redirecting...");
-      navigate("/Register");
-    }
-  }, [state, navigate]);
-
-  const [newUser, setNewUser] = useState({gender: "",birthDay: "",phone: "",city: "",name: "", email: state.email,password: state.password, image: ""});
+  const [newUser, setNewUser] = useState({
+    gender: "",
+    birthDay: "",
+    phone: "",
+    city: "",
+    name: "",
+    email: state.email,
+    password: state.password,
+    image: "",
+  });
 
   const chgName = (e) => setNewUser({ ...newUser, name: e.target.value });
   const chgGender = (e) => setNewUser({ ...newUser, gender: e.target.value });
@@ -55,7 +54,6 @@ export default function ContinueRegister(props) {
     }
   };
 
-
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -83,9 +81,9 @@ export default function ContinueRegister(props) {
     }
     const newUserId = uuidv4();
     console.log(newUserId);
-    
+
     AddUser(
-      newUserId, 
+      newUserId,
       newUser.name,
       newUser.birthDay,
       newUser.email,
@@ -95,12 +93,19 @@ export default function ContinueRegister(props) {
       newUser.password,
       newUser.image
     );
-  
-    navigate("/Edit", { state: {uniqeId: newUserId , image: newUser.image , name: newUser.name, birthDay: newUser.birthDay, email: newUser.email, phone: newUser.phone, city: newUser}});
+
+    navigate("/Edit", {
+      state: {
+        uniqeId: newUserId,
+        image: newUser.image,
+        name: newUser.name,
+        birthDay: newUser.birthDay,
+        email: newUser.email,
+        phone: newUser.phone,
+        city: newUser,
+      },
+    });
   };
-
-
-
 
   const btnCheckIn = () => {
     console.log("Returning to home page.");
@@ -109,32 +114,44 @@ export default function ContinueRegister(props) {
 
   return (
     <div className="register-container">
-    <div className="container mt-5" style={{ fontFamily: "Comic sans MS ,sans-serif"}}>
-      <div className="card p-4 shadow-lg" >
-        <h1 className="text-center mb-4">Complete Your Profile</h1>
-        <label>Name:</label>
-        <input type="text" className="form-control" onChange={chgName} />
-        
-        <label>Gender:</label>
-        <select className="form-select" onChange={chgGender}>
-          <option value="">Select a Gender</option>
-          <option value="Female">Female</option>
-          <option value="Male">Male</option>
-          <option value="Other">Other</option>
-        </select>
-        
-        <label>Birth Date:</label>
-        <DatePicker selected={newUser.birthDay} onChange={handleDateChange} dateFormat="dd/MM/yyyy" maxDate={new Date()} showYearDropdown scrollableYearDropdown placeholderText="Select your birth date" className="form-control" />
-        {error && <p className="text-danger">{error}</p>}
-  
-        <label>Phone:</label>
-        <input type="text" className="form-control" onChange={chgPhone} />
-        {phoneError && <p className="text-danger">{phoneError}</p>}
-        
-        <label>City:</label>
-        <select className="form-select" onChange={chgCity}>
-          <option value="">Select a city</option>
-          <option value="Afula">Afula</option>
+      <div
+        className="container mt-5"
+        style={{ fontFamily: "Comic sans MS ,sans-serif" }}
+      >
+        <div className="card p-4 shadow-lg">
+          <h1 className="text-center mb-4">Complete Your Profile</h1>
+          <label>Name:</label>
+          <input type="text" className="form-control" onChange={chgName} />
+
+          <label>Gender:</label>
+          <select className="form-select" onChange={chgGender}>
+            <option value="">Select a Gender</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label>Birth Date:</label>
+          <DatePicker
+            selected={newUser.birthDay}
+            onChange={handleDateChange}
+            dateFormat="dd/MM/yyyy"
+            maxDate={new Date()}
+            showYearDropdown
+            scrollableYearDropdown
+            placeholderText="Select your birth date"
+            className="form-control"
+          />
+          {error && <p className="text-danger">{error}</p>}
+
+          <label>Phone:</label>
+          <input type="text" className="form-control" onChange={chgPhone} />
+          {phoneError && <p className="text-danger">{phoneError}</p>}
+
+          <label>City:</label>
+          <select className="form-select" onChange={chgCity}>
+            <option value="">Select a city</option>
+            <option value="Afula">Afula</option>
             <option value="Arad">Arad</option>
             <option value="Ashdod">Ashdod</option>
             <option value="Ashkelon">Ashkelon</option>
@@ -158,7 +175,9 @@ export default function ContinueRegister(props) {
             <option value="Kiryat Yam">Kiryat Yam</option>
             <option value="Lod">Lod</option>
             <option value="Ma'ale Adumim">Ma'ale Adumim</option>
-            <option value="Modi'in-Maccabim-Re'ut">Modi'in-Maccabim-Re'ut</option>
+            <option value="Modi'in-Maccabim-Re'ut">
+              Modi'in-Maccabim-Re'ut
+            </option>
             <option value="Nazareth">Nazareth</option>
             <option value="Netanya">Netanya</option>
             <option value="Nes Ziona">Nes Ziona</option>
@@ -176,20 +195,34 @@ export default function ContinueRegister(props) {
             <option value="Yavne">Yavne</option>
             <option value="Yokneam">Yokneam</option>
             <option value="Zefat">Zefat</option>
-        </select>
-  
-        <label>Upload Profile Picture:</label>
-        <input type="file" className="form-control" accept="image/*" onChange={handleImageUpload} />
-        {newUser.image && <img src={newUser.image} alt="Profile Preview" className="rounded-circle mt-3" style={{ width: "150px", height: "150px", objectFit: "cover" }} />}
-        
-        <div className="d-flex justify-content-between mt-4">
-          <button className="btn btn-primary" onClick={ConfirmBtn}>Next</button>
-          <button className="btn btn-secondary" onClick={btnCheckIn}>Back</button>
+          </select>
 
+          <label>Upload Profile Picture:</label>
+          <input
+            type="file"
+            className="form-control"
+            accept="image/*"
+            onChange={handleImageUpload}
+          />
+          {newUser.image && (
+            <img
+              src={newUser.image}
+              alt="Profile Preview"
+              className="rounded-circle mt-3"
+              style={{ width: "150px", height: "150px", objectFit: "cover" }}
+            />
+          )}
+
+          <div className="d-flex justify-content-between mt-4">
+            <button className="btn btn-primary" onClick={ConfirmBtn}>
+              Next
+            </button>
+            <button className="btn btn-secondary" onClick={btnCheckIn}>
+              Back
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
   );
 }
