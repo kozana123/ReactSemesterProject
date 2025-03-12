@@ -70,7 +70,6 @@ export default function Edit() {
     );
     console.log("User preferences saved:", userPreference);
     navigate("/MainPage", {state: state});
-    console.log(state);
   };
 
   return (
@@ -174,8 +173,6 @@ export default function Edit() {
               Save
             </button>
           </div>
-          
-          {console.log(usersDetails)}
         </div>
       </div>
     </div>

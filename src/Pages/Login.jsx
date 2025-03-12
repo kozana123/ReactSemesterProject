@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
@@ -14,6 +14,7 @@ export default function Login(props) {
  
 
   console.log(usersDetails);
+
   const btnCheckIn = () => {
     navigate("/Register");
   };
@@ -32,13 +33,6 @@ export default function Login(props) {
     }
   };
 
-  const chgUserName = (e) => {
-    setUser({ ...user, email: e.target.value });
-  };
-
-  const chgPassword = (e) => {
-    setUser({ ...user, password: e.target.value });
-  };
 
   return (
 <Container className="d-flex justify-content-center align-items-center vh-100 login-container">

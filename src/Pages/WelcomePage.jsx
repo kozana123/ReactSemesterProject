@@ -1,19 +1,12 @@
 import React from 'react'
-import { useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import "../css/WelcomePage.css";
-import { useContext } from "react";
-import { DataContext } from "./AppDB";
+
 
 export default function WelcomePage() {
 
     const navigate = useNavigate();
-    const {state} = useLocation();
-    const usersList = state
-    console.log(usersList);
-    const usersDetails = useContext(DataContext);
-    console.log(usersDetails);
+
 
     const btnRegister = () =>{
             navigate('Register',)

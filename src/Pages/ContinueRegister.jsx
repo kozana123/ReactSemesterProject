@@ -8,7 +8,7 @@ import "../css/ContinueRegister.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { v4 as uuidv4 } from 'uuid';
-import { Button } from "bootstrap";
+
 
 
 export default function ContinueRegister(props) {
@@ -58,7 +58,6 @@ export default function ContinueRegister(props) {
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
-  
     if (file) {
       const reader = new FileReader();
       reader.readAsDataURL(file);

@@ -1,5 +1,5 @@
 import './css/App.css';
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import WelcomePage from './Pages/WelcomePage'
@@ -10,11 +10,7 @@ import ConnectedUserEdit from './Pages/ConnectedUserEdit'
 import SearchChat from './Pages/SearchChat'
 import Setting from './Pages/Setting'
 
-
-
-
 function App(props) {
-  const navigate = useNavigate();
   return (
     <>      
       <div className="card">

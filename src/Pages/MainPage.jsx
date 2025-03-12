@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/MainPage.css";
 import { useLocation } from "react-router-dom";
-import Login from "./Login";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "./AppDB";
 import { useContext } from "react";
@@ -10,10 +9,9 @@ import { motion } from "framer-motion";
 export default function MainPage() {
   const { userPreference, AddusersInSearch } = useContext(DataContext);
   const navigate = useNavigate();
-   const loginUser = useLocation();
+  const loginUser = useLocation();
   const connectedUser = loginUser.state;
-  console.log(loginUser);
-  console.log("hi", connectedUser);
+ 
 
   // const [currentUser, setCurrentUser] = useState(null);
 
@@ -28,12 +26,10 @@ export default function MainPage() {
   // }, []);
 
   const moveToEdit = () => {
-    console.log(userPreference);
     const connectedUserPreference = userPreference.find(
       (checkUserPreference) =>
         checkUserPreference.uniqeId === connectedUser.uniqeId
     );
-    console.log(connectedUserPreference);
     navigate("/ConnectedUserEdit", { state: { connectedUser, connectedUserPreference } });
 
   };

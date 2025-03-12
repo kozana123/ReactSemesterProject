@@ -4,10 +4,6 @@ import { DataContext } from "./AppDB";
 import { useContext } from "react";
 import "../css/Edit.css";
 
-
-
-
-
 export default function ConnectedUserEdit() {
     
     const {updateUserPreference} = useContext(DataContext);
@@ -15,8 +11,6 @@ export default function ConnectedUserEdit() {
     const location = useLocation();
     const connectedUser = location.state.connectedUser;
     const connectedUserPreference = location.state.connectedUserPreference
-    console.log(connectedUser);
-    console.log(connectedUserPreference);
 
 
     const [userNewPreference, setNewUserPreference] = useState({
